@@ -1,0 +1,866 @@
+﻿@import url(http://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css);
+/*댓글 미리보기*/
+.ui-dialog { /*댓글 미리보기 세로 위치*/
+    top: 120px!important}
+
+.view_reply { /*댓글 미리보기 버튼*/
+    height: 16px;
+    line-height: 46px;
+    padding: 0 5px;
+    cursor : pointer;}
+
+.ui-widget { /*댓글 미리보기 팝업창*/
+    font-size: 1em!important}
+.ui-widget-content { border: 0; background: #5c5c5c; color: #4F4F4F; }
+/* 테스트중
+.btn-class {
+    display: none;
+    border: 1px solid #c9ae34;
+    color: #705D07;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-family: Verdana;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    padding: 10px 40px;
+    box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px 0 #D4D4D4;
+    -moz-box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px 0 #D4D4D4;
+    -webkit-box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px 0 #D4D4D4;
+    text-shadow: 0 1px 0 #fff;
+    background-image: linear-gradient(to top, #fce374, #fcdf5b);
+    background-color: #705d07
+}
+
+.btn-class:active,
+.btn-class:hover {
+    border: 1px solid #967d09;
+    color: #705D07;
+    box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d;
+    -moz-box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d;
+    -webkit-box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d;
+    background-color: #fcdf5b
+}
+*/
+
+
+
+
+/*테스트중
+.tbl_type01 tbody,
+element.style,
+tr {
+    background: #ff0000!important
+}*/
+
+/*기본 설정*/
+
+.index {
+    width: 100%!important;
+    min-width: 1010px!important;
+    background-color: #2d2d2d!important} /*전체 배경*/
+    
+.index #PCHeader { /*상단 메뉴 배경*/
+    margin-bottom: 5px; /*상단 메뉴 높이*/
+    border-bottom: 0; /*상단 메뉴 경계선*/
+    background-color: #3c3c3c!important /*상단 메뉴 배경색*/}
+
+.footer, .index #PCHeader .bg { /*최상단, 최하단 배경색*/
+    background: #2d2d2d!important}
+
+.index #PCHeader .main_menu { /*상단 메뉴 너비*/
+    width: 1010px}
+
+.index #PCheader .main_menu .logo a, /*상단 MLBPARK 로고 변경*/
+img[src="http://image.donga.com/challenge/mlbpark/images/img_logo.gif"] {
+    height: 0!important;
+    width: 0!important;
+    padding-left: 199px!important;
+    padding-top: 33px!important;
+    background: url(https://i.imgur.com/Kw4y09a.png) no-repeat!important;
+    background-size: 100% 100%}
+    
+.index #PCHeader .main_menu .list_menu li a .icon_menu { /*상단 메뉴 버튼*/
+    display: block;
+    height: 62px;
+    background: url(https://i.imgur.com/2RUlkeY.gif) no-repeat;
+    text-indent: -999999px}
+
+.index #PCHeader .main_menu .list_menu li a.on .menu01 { /*상단 메뉴 (MLB타운)*/
+    background-position: 0 -62px}
+.index #PCHeader .main_menu .list_menu li a .menu02 { /*상단 메뉴 (한국야구타운)*/
+    background-position: -88px 0}
+.index #PCHeader .main_menu .list_menu li a .menu03 { /*상단 메뉴 (BULLPEN)*/
+    background-position: -198px 0}
+.index #PCHeader .main_menu .list_menu li a .menu04 { /*상단 메뉴 (뉴스)*/
+    background-position: -291px 0}
+.index #PCHeader .main_menu .list_menu li a .menu05 { /*상단 메뉴 (명문관)*/
+    background-position: -350px 0}
+.index #PCHeader .main_menu .list_menu li a .menu06 { /*상단 메뉴 (건의사항)*/
+    background-position: -415px 0}
+.index #PCHeader .main_menu .list_menu li a .menu07 { /*상단 메뉴 (더그아웃)*/
+    background-position: -498px 0}
+.index #PCHeader .main_menu .list_menu li a .menu08 { /*상단 메뉴 (마이라커)*/
+    background-position: -583px 0}
+
+.index #PCHeader>.main_menu>.list_menu>li:nth-of-type(4)>.top04.news, /*상단 메뉴 (뉴스) 감추기*/
+.index #PCHeader>.main_menu>.list_menu>li:nth-of-type(5)>.top05.prestige{ /*상단 메뉴 (명문관) 감추기*/
+    display: none}
+ 
+.index #PCHeader .main_menu .btn_box .btn_write01 img[src="http://image.donga.com/challenge/mlbpark/images/btn_write01.gif"] { /*상단 메뉴 글쓰기 아이콘*/
+    width: 0!important;
+    padding-left: 28px!important;
+    padding-top: 28px!important;
+    background: url(https://i.imgur.com/I1NSBLa.png) no-repeat!important;
+    background-size: 100% 100%}
+
+.index #PCHeader .main_menu .btn_box .btn_search01 img[src="http://image.donga.com/challenge/mlbpark/images/btn_search01.gif"] { /*상단 메뉴 검색 아이콘*/
+    width: 0!important;
+    padding-left: 28px!important;
+    padding-top: 28px!important;
+    background: url(https://i.imgur.com/uKa1N19.png) no-repeat!important;
+    background-size: 100% 100%}
+
+.index #container {
+    margin: 20px auto /*상단메뉴-게시판 세로간격*/;
+    width: 1010px}
+
+.index #container .contents .left_cont {
+    width: 1010px!important; /*게시판 너비*/
+    margin-bottom: 20px; /*게시판-담장목록 세로간격*/}
+    
+.left_cont table {/*게시판 너비*/
+    width: 1010px}
+
+/*광고, 메뉴 표시*/
+#center_ad01, #center_ad02, #left_ad, #right_cont, #right_ad, .list_search+div, .picture, .right_menu, .top_ad, .view_context+div, .tbl_type01 .icon_hot {
+    display: none}
+
+.prev_list { /*이전 게시판 표시*/
+    display: inline-block}
+
+.tbl_type01 { /*게시판 색상*/
+    width: 100%;
+    margin-bottom: 10px;
+    background: #3c3c3c;
+    border: none}
+
+.tbl_type01 tr:nth-child(odd) { /*게시판 색상 (1)*/
+    background-color: #4b4b4b!important}
+.tbl_type01 tr:nth-child(odd):hover { /*게시판 색상 (롤오버) (1)*/
+    background-color: #5a5a5a!important}
+.tbl_type01 tr:nth-child(even) { /*게시판 색상 (2)*/
+    background-color: #3c3c3c!important}
+.tbl_type01 tr:nth-child(even):hover { /*게시판 롤오버 (2)*/
+    background-color: #5a5a5a!important;}
+
+
+
+/*글쓰기*/
+.cleditorMain iframe { /*글쓰기 화면 배경*/
+    background: #4b4b4b}
+
+.write_box, .write_box .tit_input {/*글쓰기 프레임 색상*/
+    margin-bottom: 10px;
+    width: 100%;
+    background: #3c3c3c}
+    
+.write_box .tit_input {
+    border: 0;}
+
+.textarea_box .btn_area { /*글쓰기 하단 프레임*/
+	background: #3c3c3c;
+	border-top: 0px;}
+.textarea_box { /*글쓰기 입력박스*/
+	width: 975px;
+	border: 0px;}
+	
+.write_box .select_box select { /*글쓰기화면 말머리*/
+	background: #4b4b4b;
+	border: 0px;
+	color: #bebebe;}
+
+.write_box .tit_input input { /*글쓰기화면 제목*/
+	background: #4b4b4b;
+	color: #bebebe;}
+
+.textarea_box .btn_area a { /*글쓰기 등록버튼*/
+	background: #5a5a5a;
+	color: #cdcdcd;}
+
+/*게시판 세부설정 (리스트)*/
+.tbl_type01 thead tr td:first-child {
+    background: #353535;}
+.tbl_type01 thead tr td {/*게시판 상단 타이틀 (번호, 제목, 글쓴이 등)*/
+    height: 48px;
+    background-color: #353535;
+    color: #cdcdcd;
+	border-bottom: 0}
+ 
+.tbl_type01 tbody tr td .word {/*말머리 설정(MLB타운, 한국야구타운)*/
+    color: #cdcdcd;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: bold;}
+
+.tbl_type01 tbody tr td .word_bullpen {/*말머리 설정(BULLPEN)*/
+    width: 50px;
+    padding-right: 3px;
+    margin-left: 0;
+    color: #cdcdcd;
+    text-align: center}
+
+.tbl_type01 .replycnt {/*댓글수 폰트*/
+    color: #ff7f02;
+    font-weight: bold;}
+    
+.tbl_type01 tbody tr td, .tbl_type01 tbody tr td a {/*글번호, 글목록 속성*/
+	width: auto!important;
+	max-width: 605px;
+	height: 48px;
+	line-height: 46px;
+	border-top: 0px;
+	color: #bebebe;
+	vertical-align: middle;
+	white-space: nowrap;}
+.tbl_type01 .nick { /*닉네임*/
+	height: 48px;
+	line-height: 46px;
+	color: #cdcdcd;
+	padding: 0 0 0 10px;
+	text-align: left;}
+ .tbl_type01 .date { /*날짜*/
+	color:#bebebe;
+	white-space:nowrap;}
+.tbl_type01 .viewV { /*조회수*/
+	font-weight:bold;
+	color:#bebebe;}
+
+.tbl_type01 .t_left a:visited { /*읽은 글 색상변경*/
+	color: #919191;}
+
+.page strong {/*하단 현재 페이지*/
+	color: #cdcdcd;
+	font-weight:bold;}
+
+.page a {/*하단 페이지*/
+	color: #bebebe;}
+
+.page a.right {/*하단 페이지 이전, 다음 버튼*/
+	background: url(https://i.imgur.com/ub9rCRm.png) no-repeat 0 -32px;
+	vertical-align: middle;}
+.page a.left {
+	background: url(https://i.imgur.com/ub9rCRm.png) no-repeat 0 -32px;
+	vertical-align: middle;}
+	
+.list_search {/*하단 검색폼*/
+    float: left!important;
+    height: 30px!important;
+    width: 350px!important;
+    padding: 0 20px 0 0!important;
+    border: 0;
+    background: #3c3c3c;}
+.list_search span input, .list_search span select {
+	color: #bebebe;
+	background-color: #3c3c3c;}
+
+.list_search .in_s {/*하단 검색폼(검색버튼)*/
+	border-left: 0;
+    background: url(https://i.imgur.com/jKg1DRt.gif) left top no-repeat;
+    width: 52px;
+    height: 28px;
+    box-sizing: border-box;
+    padding-left: 52px}
+
+.paging_box .btn_list .btn_write, .paging_box .btn_list a {/*하단 검색, 쓰기버튼 제거*/
+    display: none}
+
+.prev_list strong {
+    color: #bebebe;
+    background: #3c3c3c
+}
+
+.prev_list strong {/*이전게시판_테이블_속성*/
+	color: #bebebe;
+	background: #3c3c3c;}
+.prev_list a {
+	border: none;
+	color: #afafaf;
+	background: #3c3c3c;}
+
+.index #container .contents {/*하단-담장 세로간격*/
+    padding-bottom: 15px}
+
+/*게시판 세부설정 (본문)*/
+#contentDetail img, /*본문 미디어*/
+video {
+    width: auto!important;
+    max-width: 970px!important; /*미디어 최대너비*/
+    text-align: center!important}
+
+.view_head .items .text {/*글번호, 추천, 조회 위치 및 크기*/
+    width: 970px}
+
+.left_cont .titles {/*본문글 상단속성*/
+	border: 0px;
+	background: #3c3c3c;
+	color: #cdcdcd;
+	height: 48px;
+	line-height: 46px;}
+
+.view_head .items .text .nick {/*본문글_닉네임_폰트*/
+	color: #cdcdcd;}
+
+.left_cont .titles .word {/*본문글_말머리_폰트*/
+	color: #cdcdcd;}
+
+.view_head .items .photo {/*본문 이모티콘 프레임*/
+    border-radius: 20%;
+    border: none}
+.view_head .items .photo a img {/*본문_이모티콘_속성*/
+	border-radius: 20%;}
+
+.view_head {/*본문글_상단배경_속성*/
+	border-left: 0px;
+	border-right: 0px;
+	background: #3c3c3c;}
+
+.view_head .items .text .date, .view_head .items .text .text3 span em, .view_head .items .text .text3 .val, .view_head .items .text .text2 .tit, .view_head .items .text .text3 .txt_bar {/*본문글 상단 (글번호, IP, 글번호 색상, 작성일, 추천조회댓글수, 경계선)*/
+	color: #bebebe;;}
+
+.view_head .items .text .text2 .val {/*본문글 추천, 조회수 폰트 색상*/
+	color: #cdcdcd;}
+
+.view_head .items .text .text2 #replyCnt {/*본문글 리플수 색상*/
+	color: #ff7f02;}
+
+.view_context .ar_txt {/*본문글, 배경 속성*/
+    font-family: '맑은고딕';
+    background: #4b4b4b;
+    color: #bebebe !important;
+    border: 0px;}
+
+.view_context .ar_txt_tool {/*본문글 하단 (추천, 스크랩) 배경*/
+	border-top: 0px;
+	background: #3c3c3c;}
+
+.view_suggest { /*펼처보기 배경색*/
+	background: #2d2d2d;}
+
+.view_suggest .title {/*본문글 하단 (최신글, 퀄리파잉, 리플) 배경*/
+	border: 0px;
+	background: #3c3c3c;}
+
+.view_suggest .title .tool_left span {/*본문글 하단 폰트색상(닉네임, 퀄리파잉 오퍼, 리플수)*/
+	color: #ff7f02;}
+
+.view_suggest .title .tool_left a, .view_suggest .title .tool_right a, .view_suggest .title .tool_right a.on  {/*본문글 하단 폰트색상(O님 최신글 더보기, 접기)*/
+	color: #bebebe;}
+
+.view_suggest ul li:nth-child(even) {/*본문글 하단 접기 배경색*/
+    background: #4b4b4b}
+.view_suggest ul li:nth-child(odd) {
+    background: #5a5a5a}
+
+.view_suggest ul li {/*본문글 최신글 더보기 (테두리)*/
+	border-top: none;}
+
+.view_suggest ul li .val, .view_context .ar_txt_tool a, .view_context .ar_txt_tool .tool_right span a {/*본문글 하단 최신글(게시판), 스크랩추천 색상*/
+	font-weight: bold;
+	color: #cdcdcd;}
+
+.view_context .ar_txt_tool .tool_right span { /*본문 하단 추천 버튼 테두리*/
+    border: 0px;}
+
+.view_context .ar_txt_tool .tool_left .icon_scrap { /*스크랩 버튼 아이콘*/
+    background: url(https://i.imgur.com/LhJM2tL.png) no-repeat}
+
+.view_suggest ul li .subject a, .view_suggest ul li .date {/*본문글 하단 최신글 더보기 (글목록, 날짜) 색상*/
+	color: #bebebe;}
+
+.view_context { /*본문 테두리*/
+	border: none;}
+.view_suggest ul { /*본문 하단 (최신글 더보기) 테두리*/
+	border: none;}
+	
+.view_suggest .title .tool_left { /*댓글 (리플) 색상*/
+	color: #cdcdcd;}
+
+
+/*댓글 페이지*/
+#cmtFormTable td, .reply_list {/*댓글 입력폼 전체 배경색*/
+    background: #353535!important}
+    
+#contentTable {/*댓글 입력 폼*/
+    width: 95%!important;
+    margin: 0 0 0 38px!important;
+    color: #bebebe!important;
+    background: #4b4b4b}
+
+.reply_list {/*댓글 리스트 전체 프레임*/
+    padding: 0 0 20px!important}
+
+.txt {/* 댓글 박스 여백 조정 */
+    margin-top: -13px!important;
+    margin-bottom: -10px!important}
+    
+.reply_list .other_con .photo {/*댓글 타인 아이콘 위치, 테두리*/
+    left: 0!important;
+    border: 0}
+.reply_list .my_con .photo {/*댓글 내 아이콘 위치, 테두리*/
+	left: 10px;
+    border: 0}
+    
+.reply_list .txt_box img, video {/*댓글 이미지 너비*/
+    width: auto!important;
+    max-width: 970px!important;}
+
+.reply_list .other_reply .txt:nth-child(odd) {/*댓글 배경색, 폰트*/
+    background: rgba(60, 60, 60, 0);
+    font-family: '맑은고딕'}
+    
+.reply_list .other_con {/*댓글 경계선*/
+    border-bottom: 1px solid #2d2d2d}
+
+.reply_list .my_con {/*내 댓글 배경색 (전체 프레임)*/
+    background: #5a5a5a}
+.reply_list .my_reply .txt {/*내 댓글 배경색 (텍스트박스)*/
+    float: left;
+    background: #5a5a5a}
+
+.reply_list .my_con, .reply_list .other_con:nth-child(even), .reply_list .other_con:nth-child(odd) {
+    padding: 10px 0 0 55px}
+
+.reply_list .other_con:nth-child(odd) {/*댓글 배경색 1*/
+    background: #3c3c3c}
+.reply_list .other_con:nth-child(even) {/*댓글 배경색 2*/
+    background: #4b4b4b}
+    
+.reply_list .my_reply .txt_box .name, .reply_list .other_reply .txt_box .name {/*댓글 닉네임 색상*/
+    color: #cdcdcd;
+    font-weight: bold}
+
+.reply_list .other_con .photo img {/*댓글 이모티콘 설정 (위치, 테두리, 보더라인)*/
+    position: absolute;
+    left: 10px;
+    border-radius: 20%;}
+
+.reply_list .other_con .txt .icon_arr {/*댓글 이모티콘 사이드 삭제*/
+    display: none}
+
+.reply_list .date, .reply_list .ip {/* 댓글 작성일시 & 아이피 주소 색상, 폰트 */
+	display: inline;
+	color: #afafaf !important;
+	font-size: 11px;
+	font-family: Lucida Console;}
+	
+.reply_list .other_reply .txt .re_txt { /*타인 댓글 색상*/
+	color: #bebebe;}
+
+.reply_list .my_reply .txt .re_txt { /*내 댓글 색상*/
+	color: #cdcdcd;
+	font-weight: bold;}
+
+.reply_list .my_con .photo img { /*댓글 내 이모티콘 프레임*/
+	border-radius: 25%;}
+
+.reply_list .my_reply .txt .btn_edit, .reply_list .my_reply .txt .btn_redel { /*댓글 수정, 삭제 폰트 색상*/
+	color: #bebebe;}
+
+.page {/*하단 페이지 넘버*/
+    height: 48px;
+    background: #2d2d2d;
+    border: none;}
+
+.index #re_btn img[src="http://image.donga.com/challenge/mlbpark/images/sub_ok1.gif"] { /*댓글 등록버튼*/
+	height: 0 !important;
+	width: 0 !important;
+	padding-left: 72px !important;
+	padding-top: 72px !important;
+	background: url(https://i.imgur.com/elA8h5M.png) no-repeat !important;
+	background-size: 100% 100%;}
+
+.index a img[src="http://image.donga.com/challenge/mlbpark/images/sub_refresh.gif"] { /*댓글 새로고침*/
+    height: 0!important;
+    width: 0!important;
+    padding-left: 72px!important;
+    padding-top: 29px!important;
+    background: url(https://i.imgur.com/7LUNhi2.png) no-repeat!important;
+    background-size: 100% 100%}
+
+/*최다추천, 조회, 리플*/
+.tit_today {/*담장 타이틀 제거*/
+    display: none!important}
+.main_contents .nav {/*담장 전체 프레임*/
+    overflow: auto;
+    width: 1011px;
+    margin: auto;
+    background: #2d2d2d;}    
+    
+.main_contents .nav .bestTitle {/* 담장 타이틀 위치, 폰트 */
+	color: #cdcdcd;
+	text-align: center;
+	font-size: 100%;
+	padding: 5px 0 0px 0px;
+	font-family: '맑은고딕';}
+
+.main_contents .nav li {/*담장 타이틀 너비, 배경색*/
+	width: 337px;
+	padding: 0 0px 0;
+	border-right: 1px #3c3c3c;
+	background: #3c3c3c;}
+.today_layer,.today_layer_obj {
+    width: 1009px;
+    margin: auto;
+	border: 1px #3c3c3c}
+
+.main_contents .nav li .btn_more {/*담장 화살표 교체*/
+	color: #bebebe;
+	font-size: 12px;
+	background: url(https://i.imgur.com/97CbHRs.gif) no-repeat right center;}
+
+.lists_today {/*담장 리스트 너비*/
+    margin: 0 0 0 0;
+    padding: 15px 6px 15px 6px;
+    width: 330px;
+    border-right: 1px #4b4b4b;
+    background: #4b4b4b;}
+
+.lists_today .items .text .title a,.lists_today .items .text .title a:hover {/*담장 글목록 폰트속성*/
+	width: auto !important;
+	height: 30px;
+	font-family: "맑은고딕";
+	font-size: 13px;
+	color: #bebebe;
+	float: left;
+	max-width: 140%;}
+
+.lists_today .items .text .title a {/*담장 글목록 색상*/
+    color: #bebebe;}
+
+.lists_today .items .text .title a:hover {/*담장 글목록 색상 (롤오버)*/
+    color: #cdcdcd;}
+
+
+
+/*더그아웃*/
+.dugout_tbl .tbl_type01 .nick_txt { /*더그아웃 말머리*/
+	color: #cdcdcd;
+	font-weight: bold;}
+
+.dugout_tbl .tbl_type01 .allim { /*더그아웃 메시지 색상 (제가 윗글에~)*/
+	color: #afafaf;}
+
+.dugout_tbl .tbl_type01 .kind, .dugout_tbl .tbl_type01 .kind a {/*더그아웃 리플 색상*/
+    color: #cdcdcd;
+    font-weight: bold;}
+
+.dugout_tbl .tbl_type01 .t_left a { /*더그아웃 안읽은 글*/
+	color: #bebebe;}
+
+.dugout_tbl .tbl_type01 .t_left .no_link { /*더그아웃 쪽지*/
+	color: #cdcdcd;}
+
+.dugout_tbl .tbl_type01 .allim em { /*더그아웃 쪽지 송수신자*/
+	color: #ff7f02;
+	font-weight: bold;}
+
+.dugout_tbl .tbl_type01 .block a { /*더그아웃 쪽지차단 버튼*/
+	text-decoration : none;
+	color: #afafaf!important;}
+
+.select .sel { /*더그아웃 드롭박스*/
+	background-size: 12px 7px;
+	color: #bababa;
+	font-size: 13px;
+	border : 0;
+	background: #4b4b4b;}
+
+.tbl_type01 .photo {
+    display: inline-block;
+    width: 21px;
+    height: 48px;
+	line-height: 46px;
+	
+}
+.tbl_type01 .photo a img { /*더그아웃 이모티콘*/
+	width: 24px;
+    height: 24px;
+    border : 0;
+	border-radius: 20%;}
+
+
+
+.index .headline ul li .txt a { /*메인화면 우측 썸네일 텍스트*/
+	color: #cdcdcd;}
+.index .headline ul li .txt a:hover {
+	color: #dcdcdc;}
+
+.index .headline ul li, .index .headline ul li .txt { /*메인화면 우측 썸네일 텍스트 가로정렬*/
+	width: auto;}
+
+.index .article_box { /*메인 최신글 테이블넓이*/
+	width: 1011px;}
+
+.index .article_box .news_cont {/*메인-헤드라인 세로간격*/
+	margin-top: 15px;}
+
+.index .article_box .news_cont .news_list {/*메인 최신글 너비*/
+    width: 499px;
+    background: #3c3c3c;
+    color: #cdcdcd}
+
+.index .article_box .news_cont .news_list ul li .txt, .index .article_box .news_cont .view {/*메인화면 글색상*/
+    color: #bebebe;
+    font-family: "맑은고딕"}
+
+.index .article_box .news_cont .news_list ul { /*메인화면 최신글 프레임 색상*/
+    border: 0;
+    background-color: #4b4b4b}
+
+.index .article_box .news_cont .news_list ul, .index .article_box .news_cont .news_list ul li { /*메인화면 최신글 프레임 색상*/
+    border: 0;
+    background-color: #4b4b4b}
+.index .article_box .news_cont .news_list ul li:hover {/*메인화면 최신글 롤오버*/
+    border-top: 0;
+    background: #;
+    text-decoration-line: none}
+
+.index .article_box .news_cont .news_list ul li .txt { /*메인화면 최신글 텍스트 셀 너비, 세로 위치*/
+    width: 430px;
+    padding-top: 15px}
+.index .article_box .news_cont .news_list ul li .txt:hover { /*상기 롤오버*/
+    width: 430px;
+    padding-top: 15px;
+    color: #cdcdcd;}
+
+.index .article_box .news_cont .news_list h3 img[src="http://image.donga.com/challenge/mlbpark/images/tit_mlbtown.gif"] { /*메인화면 최신글 타이틀 (MLB타운) 교체*/
+    width: 0!important;
+    padding-left: 54px!important;
+    padding-top: 14px!important;
+    background: url(https://i.imgur.com/PpL6Ho2.png) no-repeat!important;}
+.index .article_box .news_cont .news_list h3 img[src="http://image.donga.com/challenge/mlbpark/images/tit_kbotown.gif"] { /*메인화면 최신글 타이틀 (한국야구타운) 교체*/
+    width: 0!important;
+    padding-left: 79px!important;
+    padding-top: 14px!important;
+    background: url(https://i.imgur.com/PXo4tDx.png) no-repeat!important;}
+.index .article_box .news_cont .news_list h3 img[src="http://image.donga.com/challenge/mlbpark/images/tit_bullpen.gif"] { /*메인화면 최신글 타이틀 (BULLPEN) 교체*/
+    width: 0!important;
+    padding-left: 60px!important;
+    padding-top: 12px!important;
+    background: url(https://i.imgur.com/WDiErb5.png) no-repeat!important;}
+.index .article_box .news_cont .news_list h3 img[src="http://image.donga.com/challenge/mlbpark/images/tit_prestige.gif"] { /*메인화면 최신글 타이틀 (명문관) 교체*/
+    width: 0!important;
+    padding-left: 39px!important;
+    padding-top: 14px!important;
+    background: url(https://i.imgur.com/wUk0wut.png) no-repeat!important;}
+    
+.index .article_box .news_cont .news_list ul li .icon_team { /*메인화면 최신글 이모티콘 셀*/
+    white-space: nowrap;
+    overflow: hidden;}
+.index .article_box .news_cont .news_list ul li .icon_team img { /*메인화면 최신글 이모티콘 속성*/
+    border: none; 
+    border-radius: 20%}
+
+.index .headline { /*메인화면 상단 프레임 색상*/
+    width: 1010px;
+    border: 0;
+    background: #3c3c3c}
+
+.index .headline .tit_photo {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    float: left;
+    width: 435px;
+    cursor: pointer}
+
+
+/*마이라커*/
+.emo_contents { /*마이라커 셀 (1행, 3행) 속성*/
+    background: #3c3c3c;
+    border: none}
+.emo_contents .locker_info .cont_info .name { /*마이라커 (~님 반갑습니다) 폰트속성*/
+    font-weight: bold;
+    background: #3c3c3c;
+    color: #bababa}
+.emo_contents .locker_info .cont_info .name em { /*마이라커 (닉네임) 폰트속성*/
+    color: #ff7f02}
+.emo_contents .locker_info .cont_info .desc { /*마이라커 (현재 프로필 사진~) 폰트속성*/
+    color: #bebebe}
+
+.emo_contents .emo_box .tit, .emo_contents .emo_box .tit span { /*마이라커 (프로필 사진 변경) 셀속성*/
+    background: #4b4b4b;
+    color: #cdcdcd;}
+.emo_contents .emo_box .file { /*마이라커 (프로필 사진 변경-사진선택) 경계선*/
+    border-top: 0}
+.emo_contents .emo_box .add_zone .img { /*마이라커 사진선택 버튼 교체*/
+    background: url(https://i.imgur.com/AQA5DqR.png) no-repeat;
+    background-size: 66px 16px;}
+
+.emo_contents .tit { /*마이라커 (차단 설정, 기타 설정) 셀속성*/
+    background: #3c3c3c;
+    color: #bebebe}
+.emo_contents .tit span { /*마이라커 차단 설정 (구분자는~) 폰트속성*/
+    color: #cdcdcd}
+
+.block_box { /*마이라커 (차단, 기타)설정 하단 셀속성*/
+    background: #4b4b4b}
+.block_box ul li { /*마이라커 (차단, 기타) 설정 하단 목록 경계선*/
+    border-bottom: 1px solid #5a5a5a;}
+.block_box ul li .check_box.checked, .block_box ul li .plus { /*마이라커 (차단, 기타)설정 폰트속성*/
+    color: #bebebe}
+.block_box ul li .txt { /*마이라커 (차단 입력폼) 속성*/
+    background: #5a5a5a;
+    border: none;
+    color: #bebebe}
+
+
+/*상단 검색 팝업*/
+.searchbox {  /*검색결과 2행 셀 (추천검색어) 속성*/
+    background: #4b4b4b}
+.searchbox .search_form .in_t { /*상단 검색팝업 (1행) 셀 속성*/
+    padding: 8px 45px 7px 12px;
+    background: #3c3c3c}
+.searchbox .search_form .in_t span {  /*상단 검색팝업 (1행) 안쪽 셀 속성*/
+    background: #4b4b4b;
+    color: #bebebe}
+.searchbox .search_form .in_t .sel { /*상단 검색팝업 (1행) 검색조건 드롭박스*/
+    border-right: none;
+    background: #5a5a5a;
+    color: #bebebe}
+.searchbox .search_form .in_t input {  /*상단 검색팝업 (1행) 검색어 입력폼 속성*/
+    color: #bebebe;
+    background: #5a5a5a}
+.searchbox .search_txt .box .search_list li {  /*검색결과 2행 추천검색어 테두리*/
+    border: 1px solid #3c3c3c}
+.searchbox .search_close .btn_close a { /*상단 검색팝업 (3행 '닫기') 셀 속성*/
+    color: #cdcdcd;
+    background: #3c3c3c}
+
+/*검색결과 화면*/
+.message { /*검색결과 1행 셀 속성*/
+    color: #bebebe;
+    background: #3c3c3c}
+.message span { /*검색결과 1행 (닉네임, 글모음) 폰트 속성*/
+    color: #ff7f02}
+
+/*사이트 하단*/
+.footer, .footer .link a, .footer .link span, .footer .link>strong { /*사이트 하단 폰트 속성*/
+    color: #bebebe}
+.footer .copy h2 img[src="http://image.donga.com/challenge/mlbpark/images/foot_logo.jpg"] { /*사이트 하단 로고 이미지 교체*/
+    width: 0!important;
+    padding-left: 88px!important;
+    padding-top: 16px!important;
+    background: url(https://i.imgur.com/UO35SBo.png) no-repeat!important;}
+
+/*댓글, 유저 정보 팝업박스*/
+.index #cmt.cmt #cmtall.cmtall { /*댓글 팝업박스 전체 배경색*/
+    background: #4b4b4b;}
+
+.cmt .cmtbox { /*댓글 팝업박스 2행 (입력폼) 테두리*/
+    border: 0}
+.cmt .cmtbox .name { /*댓글 팝업박스 1행 (리플쓰기 0/300) 폰트 속성*/
+    border-bottom: 0;
+    color: #bebebe}  
+.cmt .cmtbox .name .f_right em { /*댓글 팝업박스 1행 (글자수 0/300) 폰트 속성*/
+    color: #ff7f02;
+    font-weight: 700}
+.cmt .cmtbox .txt { /*댓글 팝업박스 2행, 3행 경계선 (취소, 확인)*/
+    border-bottom: 0}
+.cmt .cmtbox .txt .msg_inp { /*댓글 팝업박스 댓글 입력폼 속성*/
+    background: #5a5a5a}
+.cmt .cmtbox .btn a, .cmt .cmtbox .txt .msg_inp, .cmt .comment_list li .name, .searchbox .search_txt .box .search_list li .kwd .fix { /*댓글 팝업박스 문자열 (닉네임, 작성일, 취소, 확인) 폰트 속성*/
+    color: #bebebe}
+.cmt .cmtbox .btn a:first-child { /*댓글 팝업박스 취소, 확인 경계선*/
+    border-right: 1px solid #696969;}
+
+.cmt .comment_list li { /*댓글 팝업박스 원 메시지 셀 속성*/
+    background: #5a5a5a;
+    border-top: 1px solid #4b4b4b}
+.cmt .comment_list li .reply_txt { /*댓글 팝업박스 원 메시지 말풍선 속성*/
+    color: #bebebe;
+    background: #696969;
+    border: 1px solid #4b4b4b}
+    
+.userbox .user_list li { /*유저 정보 버튼 경계선*/
+    border-top: 1px solid #3c3c3c}
+.userbox .user_list li a { /*유저 정보 전체 배경색*/
+    color: #cdcdcd;
+    background: #4b4b4b}
+
+
+/*최다추천, 조회, 리플 전체보기 화면*/
+.title_today, .title_today .sub_today { /*상단 TODAY BEST 폰트 속성*/
+    color: #ff7f02;
+	font-family: "맑은고딕"}
+.page a.today { /*하단 오늘보기 버튼 테두리*/
+    border: none}
+
+    
+/*화면 최상단*/
+.index #PCHeader .bg .left_menu a, .page a.today, a:link:hover {/*로그아웃, 마이페이지 폰트속성*/
+    color: #cdcdcd}
+
+
+
+
+
+
+/*세부설정*/
+a:visited {
+    color : #cdcdcd;
+}
+a:link {
+	    color : #bebebe;
+}
+a:link:hover {
+	    color : #bebebe;
+    text-decoration-line: none
+}
+
+.reply_list .my_con .txt .icon_arr {
+    display: none
+}
+
+.sendmessage .messagebox {
+    background: #4b4b4b
+}
+
+.sendmessage .messagebox .txt .msg_inp {
+    color: #bebebe;
+    background: #5a5a5a
+}
+
+.sendmessage .messagebox .txt {
+    border: none;
+    background: #5a5a5a
+}
+
+.sendmessage .name {
+    height: 45px;
+    color: #bebebe
+}
+
+.sendmessage .name span {
+    color: #ff7f02
+}
+
+.sendmessage .btn a:first-child {
+    border-right: none
+}
+
+.sendmessage .btn a {
+    line-height: 45px;
+    color: #bebebe
+}
+
+img,
+input,
+li,
+select {
+    vertical-align: middle
+}
+
+
